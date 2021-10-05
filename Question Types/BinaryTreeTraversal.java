@@ -1,5 +1,7 @@
 package algorithm;
 
+import java.util.Stack;
+
 /**
  * This class will cover the three binary trees traversal patterns 
  * using both DFS and BFS approaches.
@@ -12,7 +14,7 @@ package algorithm;
 public class BinaryTreeTraversal {
 
   /**
-   * Depth first binary tree pre order traversal.
+   * Depth first binary tree pre-order traversal.
    * 
    * @param node
    */
@@ -25,7 +27,7 @@ public class BinaryTreeTraversal {
   }
 
   /**
-   * Depth first binary tree in order traversal.
+   * Depth first binary tree in-order traversal.
    *
    * @param node
    */
@@ -38,7 +40,7 @@ public class BinaryTreeTraversal {
   }
 
   /**
-   * Depth first binary tree post order traversal.
+   * Depth first binary tree post-order traversal.
    *
    * @param node
    */
@@ -49,7 +51,74 @@ public class BinaryTreeTraversal {
       visit(node);
     }
   }
+
+  /**
+   * Iterative in-order traversal.
+   * Time - O(N)
+   * Space - O(H)
+   *
+   * @param node
+   */
+  public static void inorderIterative(final TreeNode node) {
+    if (node == null) {
+      return;
+    }
+
+    final Stack<TreeNode> stack = new Stack<>();
+
+    stack.push(node);
+    TreeNode currentNode = node.left;
+       
+    while (true) {
+      if (currentNode != null) {
+        stack.push(currentNode);
+        currentNode = currentNode.left;
+      } else {
+        if (stack.isEmpty()) {
+          break;
+        }
+        final TreeNode currentRoot = stack.pop();
+        visit(currentRoot);
+        currentNode = currentRoot.right;
+      }
+    }
+  }
   
+  /**
+   * Iterative post-order traversal using two stack.
+   * Time - O(N)
+   * Space - O(N)
+   * 
+   * @param node
+   */
+  public static void postorderIterativeUsingTwoStacks(final TreeNode node) {
+    if (node == null) {
+      return;
+    }
+    
+    final Stack<TreeNode> stack1 = new Stack<>();
+    final Stack<TreeNode> stack2 = new Stack<>();
+    
+    stack1.push(node);
+    
+    while (!stack1.isEmpty()) {
+      final TreeNode currentNode = stack1.pop();
+      
+      stack2.push(currentNode);
+      
+      if (currentNode.left != null) {
+        stack1.push(currentNode.left);
+      }
+      if (currentNode.right != null) {
+        stack1.push(currentNode.right);
+      }
+    }
+    
+    while (!stack2.isEmpty()) {
+      visit(stack2.pop());
+    }
+  }
+
   /**
    * Dummy visit method that simply prints out the tree node value. 
    */
@@ -67,8 +136,15 @@ public class BinaryTreeTraversal {
     System.out.println("In-Order Traversal using DFS.");
     inorderDfs(root);
     System.out.print("\n");
+    System.out.println("In-Order Traversal using iterative approach.");
+    inorderDfs(root);
+    System.out.print("\n");
     System.out.println("Post-Order Traversal using DFS.");
     postorderDfs(root);
+    System.out.print("\n");
+    System.out.println("Post-Order Traversal using iterative two stacks.");
+    postorderIterativeUsingTwoStacks(root);
+    System.out.print("\n");
   }
 
   /**

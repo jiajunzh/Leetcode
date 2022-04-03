@@ -48,32 +48,27 @@ public class AddTwoNumbers {
    * @param l2
    * @return
    */
-  public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-    final ListNode head = new ListNode(0);
-    ListNode prev = head;
-    int carryOut = 0;
-
-    while (l1 != null || l2 != null) {
-      final int val1 = l1 == null? 0 : l1.val;
-      final int val2 = l2 == null? 0 : l2.val;
-
-      final int sum = val1 + val2 + carryOut;
-      final int val = sum % 10;
-      carryOut = sum / 10;
-      final ListNode curr = new ListNode(val);
-
-      prev.next = curr;
-      prev = curr;
-
-      if (l1 != null) l1 = l1.next;
-      if (l2 != null) l2 = l2.next;
+  public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    /* Sentinel node will point to the first node of the returned list */
+    final ListNode sentinel = new ListNode(0, null);
+    ListNode curr = sentinel;
+    int carryout = 0;
+        
+    while (l1 != null || l2 != null || carryout != 0) {
+      final int v1 = l1 == null? 0 : l1.val;
+      final int v2 = l2 == null? 0 : l2.val;
+      final int sum = v1 + v2 + carryout;
+      final int digit = sum % 10;
+      carryout = sum / 10;
+            
+      curr.next = new ListNode(digit, null);
+      curr = curr.next;
+            
+      l1 = l1 == null? null : l1.next;
+      l2 = l2 == null? null : l2.next;
     }
-
-    if (carryOut == 1) {
-      prev.next = new ListNode(1);
-    }
-
-    return head.next;
+        
+      return sentinel.next;
   }
   
   public static void main(String[] args) {

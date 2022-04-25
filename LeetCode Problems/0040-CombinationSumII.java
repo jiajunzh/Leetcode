@@ -45,7 +45,8 @@ public class CombinationSumII {
    * selecting the item at position ith, which helps with eliminating duplicate answers.
    * 
    * 2. Complexity 
-   * Same as problem 39.
+   * - Time O(2^N)
+   * - Space O(N)
    *
    * @param candidates
    * @param target

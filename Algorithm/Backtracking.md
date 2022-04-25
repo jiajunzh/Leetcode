@@ -17,6 +17,8 @@ Each recursion for backtracking includes below steps:
 5. Undo the selection.
 
 # Problems 
+- 0039 Combination Sum I
+- 0040 Combination Sum II
 - 0046 Permutations I
 - 0047 Permutations II
 - 0051 NQueens I

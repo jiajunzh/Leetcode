@@ -16,6 +16,28 @@ Each recursion for backtracking includes below steps:
 4. The next recursive call. How to further explore? 
 5. Undo the selection.
 
+# Framework
+```
+/**
+ * The input usuually includes
+ * - Path by traversing so far
+ * - The current selectionList
+ */
+private void backtrack(...) {
+
+	// End Condition Here => Record the path
+
+	for (selection : selectionList) {
+		select 
+		backtrack(...)
+		unselect
+	}
+}
+```
+
+# Backtracking & Dynamic Programming 
+As it seems, backtracking looks similar to dynamic programming. Actually, the brutal-force solution phase of dynamic programming is a backtracking. If the problem has overlapping sub-problems (re-calculation), you could use dp or memoization to prune the recursive tree, that's when backtracking is boiled down to dynamic programming. 
+
 # Problems 
 - 0039 Combination Sum I
 - 0040 Combination Sum II

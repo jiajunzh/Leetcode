@@ -1,6 +1,11 @@
 # Data Structure & Algorithm Categories
+## Data Structure - Done 
 
-## Data Structure 
+
+## Algorithm - Done 
+1. Backtracking [04/20-04/25]
+
+## Data Structure - TODO
 1. Array
  - Suffix Array
 2. String 
@@ -27,10 +32,9 @@
 13. Matrix
 14. Iterator 
 
-## Algorithm
-1. Backtracking [04/20 In_Progress]
+## Algorithm - TODO
 2. Recursion 
-3. DFS
+3. DFS [04/25 - In Progress]
 4. BFS
 5. Binary Search
 6. Memoization 

@@ -22,6 +22,13 @@ Each recursion for backtracking includes below steps:
 - 0046 Permutations I
 - 0047 Permutations II
 - 0051 NQueens I
+- 0052 NQueens II
+- 0078 Subset I
+
+## Common Search Space Pattern 
+Permutations: N!
+Combinations: C(k, N) = N! / (N - k)!k!
+Subsets: 2^N
 
 # References 
 - https://labuladong.gitbook.io/algo-en/iii.-algorithmic-thinking/detailsaboutbacktracking

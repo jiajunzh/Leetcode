@@ -1,16 +1,16 @@
 # Data Structure & Algorithm Categories
 ## Data Structure - Done 
-
+1. Linked List [04/24 In_Progress]
 
 ## Algorithm - Done 
 1. Backtracking [04/20-04/25]
+2. DFS [04/25 - In Progress]
 
 ## Data Structure - TODO
 1. Array
  - Suffix Array
 2. String 
  - String Matching 
-3. Linked List [04/24 In_Progress]
 4. Doubly-Linked List 
 5. HashTable 
  - Hash Function 
@@ -34,7 +34,6 @@
 
 ## Algorithm - TODO
 2. Recursion 
-3. DFS [04/25 - In Progress]
 4. BFS
 5. Binary Search
 6. Memoization 

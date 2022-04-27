@@ -5,6 +5,7 @@
 ## Algorithm - Done 
 1. Backtracking [04/20-04/25]
 2. DFS [04/25 - In Progress]
+3. Union Find [04/27 - In Progress]
 
 ## Data Structure - TODO
 1. Array
@@ -38,7 +39,6 @@
 5. Binary Search
 6. Memoization 
 7. Dynamic Programming 
-8. Union Find
 9. Prefix Sum 
 10. Sliding Window
 11. Two Pointers 

@@ -3,9 +3,11 @@
 1. Linked List [04/24 In_Progress]
 
 ## Algorithm - Done 
-1. Backtracking [04/20-04/25]
-2. DFS [04/25 - In Progress]
-3. Union Find [04/27 - In Progress]
+1. Backtracking **[Done 04/20-04/25]**
+2. Binary Search [04/28 - In Progress]
+2. Recursion [04/28 - In Progress]
+3. DFS [04/25 - In Progress]
+4. Union Find [04/27 - In Progress]
 
 ## Data Structure - TODO
 1. Array
@@ -34,9 +36,7 @@
 14. Iterator 
 
 ## Algorithm - TODO
-2. Recursion 
 4. BFS
-5. Binary Search
 6. Memoization 
 7. Dynamic Programming 
 9. Prefix Sum 

@@ -1,17 +1,17 @@
 # Data Structure & Algorithm Categories
 ## Data Structure - Done 
-1. Linked List [04/24 In_Progress]
+1. Array [05/08 - In Progress]
+2. Linked List [04/24 In_Progress]
 
 ## Algorithm - Done 
 1. Backtracking **[Done 04/20-04/25]**
-2. Binary Search [04/28 - In Progress]
-2. Recursion [04/28 - In Progress]
+2. Binary Search **[Done 04/28-05/08]**
+2. Recursion [05/08 - In Progress]
 3. DFS [04/25 - In Progress]
 4. Union Find [04/27 - In Progress]
 
 ## Data Structure - TODO
-1. Array
- - Suffix Array
+1. Suffix Array
 2. String 
  - String Matching 
 4. Doubly-Linked List 

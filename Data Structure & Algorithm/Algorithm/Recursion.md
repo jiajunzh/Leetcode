@@ -15,6 +15,8 @@ Recursion is an approach to solving problems using a function that calls itself 
 
 ### Problems 
 - 0024 Swap Nodes in Pairs
+- 0206 Reverse Linked List
+- 0700 Search in a Binary Search Tree
 
 ### Resources 
 - https://leetcode.com/explore/learn/card/recursion-i/251/scenario-i-recurrence-relation/

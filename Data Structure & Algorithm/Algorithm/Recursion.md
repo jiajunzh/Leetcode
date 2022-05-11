@@ -6,3 +6,11 @@ Recursion is an approach to solving problems using a function that calls itself 
 **Highlights**
 - Base Case(s) => Termination scenario that does not use recursion to produce an answer
 - Recurrence relation that reduces all other cases towards the base case
+
+### Recursion Function 
+1. Define the problem as the function F(X) to implement, where X is the input of the function which also defines the scope of the problem 
+2. Break the problem down into smaller scopes
+3. Call function F(X0), F(X1) ... F(Xn) recursively to solve the subproblems of X
+4. Finally, process the results from recursive function calls to solve the problem corresponding to X
+
+### Recurrence Relation 

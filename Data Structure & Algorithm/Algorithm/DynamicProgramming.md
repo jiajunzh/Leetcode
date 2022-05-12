@@ -33,8 +33,19 @@ Bottom-up is implemented with iteration and starts at the base case. Take Fibona
  - Is it possible to reach a certain point...
 - Future decision depends on the earlier decision => Need to factor in previous decision 
 
-### Problems
+## DP Framework
+1. State Variable: state is a set of variables that can sufficiently describe a scenario. E.g. in Climbing Stairs, state variable is the current step we are on, i = 6 means the state of being on the 6th step.
+2. A function/data structure that will compute/contain the answer to the problem for every given state. For example in Climbing Stairs, dp[i] = number of ways to climb to the ith step.
+3. Recurrence relation to transition between states. For example, dp[i] = dp[i - 1] + dp[i - 2]
+4. Base Case
 
+## Personal Thoughts 
+- Space Optimization: once having the basic version of DP, think about whether only a few elements were considered or the whole dp array for each iteration. If the former, we could optimize the space to constant space.
 
-### Resources 
+## Problems
+- 0198 House Robber
+- 0746 Min Cost Climbing Stairs
+- 1137 N-th Tribonacci Number
+
+## Resources 
 - https://leetcode.com/explore/learn/card/dynamic-programming/630/an-introduction-to-dynamic-programming/

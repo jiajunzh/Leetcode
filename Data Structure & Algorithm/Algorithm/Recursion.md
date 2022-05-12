@@ -13,9 +13,14 @@ Recursion is an approach to solving problems using a function that calls itself 
 3. Call function F(X0), F(X1) ... F(Xn) recursively to solve the subproblems of X
 4. Finally, process the results from recursive function calls to solve the problem corresponding to X
 
+### Memoization - Duplicate Calculation in Recursion 
+Recursion brings duplicate calculations in if we do not do it wisely. A Technique called memoization could be used to avoid this problem. Memoization stores the intermediate results in cache that will be reused later without re-calculation.
+
 ### Problems 
 - 0024 Swap Nodes in Pairs
+- 0070 Climbing Stairs
 - 0206 Reverse Linked List
+- 0509 Fibonacci Number
 - 0700 Search in a Binary Search Tree
 
 ### Resources 

@@ -19,6 +19,7 @@ Recursion brings duplicate calculations in if we do not do it wisely. A Techniqu
 ### Problems 
 - 0024 Swap Nodes in Pairs
 - 0070 Climbing Stairs
+- 0119 Pascal's Triangle II
 - 0206 Reverse Linked List
 - 0509 Fibonacci Number
 - 0700 Search in a Binary Search Tree

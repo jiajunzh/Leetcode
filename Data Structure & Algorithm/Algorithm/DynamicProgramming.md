@@ -24,6 +24,27 @@ Bottom-up is implemented with iteration and starts at the base case. Take Fibona
 - Bottom-up implementation's runtime is usually faster as iteration does not have overhead as recursion does.
 - Top-down implementation is usually much easier to write as with recursion the ordering of subproblems does not matter.
 
+## DP Framework
+1. State Variable: state is a set of variables that can sufficiently describe a scenario. E.g. in Climbing Stairs, state variable is the current step we are on, i = 6 means the state of being on the 6th step.
+2. A function/data structure that will compute/contain the answer to the problem for every given state. For example in Climbing Stairs, dp[i] = number of ways to climb to the ith step.
+3. Recurrence relation to transition between states. For example, dp[i] = dp[i - 1] + dp[i - 2]
+4. Base Case
+
+## Multidimensional DP 
+Things to look out for in DP problems that require a state variable include:
+- An index along some input. For example, it could represent the answer to the problem if the input was considered only up to that index.
+- A second index along some input. For example, the answer to the problem if considering the input starting at index i and ending at index j. 
+- Explicit numerical constraints given in the problem. For example, you are only allowed to complete k transactions.
+- Variables that describe statuses in a given state. For example, true if holding a key and false if not.
+- Some sort of data like a tuple or bitmask used to indicate things being "visited" or "used".
+
+## Convert Top-Down to Bottom-Up
+1. Initialize an array dp that is sized according to your state variables. For example, let's say the input to the problem was an array nums and an integer k that represents the maximum number of actions allowed. Your array dp would be 2D with one dimension of length nums.length and the other of length k. The values should be initialized as some default value opposite of what the problem is asking for. For example, if the problem is asking for the maximum of something, set the values to negative infinity. If it is asking for the minimum of something, set the values to infinity.
+2. Set your base cases, same as the ones you are using in your top-down function.
+3. Write a for-loop(s) that iterate over your state variables. If you have multiple state variables, you will need nested for-loops. These loops should start iterating from the base cases.
+4. Now, each iteration of the inner-most loop represents a given state, and is equivalent to a function call to the same state in top-down.
+5. Return the answer to the original problem
+
 ## Common Patterns
 - The problem asks for the optimal value (maximum or minimum), number of ways there are to do something or if it is possible to reach a certain point. (It might be greedy or DP)
  - What is the minimum cost of doing...
@@ -32,12 +53,6 @@ Bottom-up is implemented with iteration and starts at the base case. Take Fibona
  - What is the longest possible...
  - Is it possible to reach a certain point...
 - Future decision depends on the earlier decision => Need to factor in previous decision 
-
-## DP Framework
-1. State Variable: state is a set of variables that can sufficiently describe a scenario. E.g. in Climbing Stairs, state variable is the current step we are on, i = 6 means the state of being on the 6th step.
-2. A function/data structure that will compute/contain the answer to the problem for every given state. For example in Climbing Stairs, dp[i] = number of ways to climb to the ith step.
-3. Recurrence relation to transition between states. For example, dp[i] = dp[i - 1] + dp[i - 2]
-4. Base Case
 
 ## Personal Thoughts 
 - Space Optimization: once having the basic version of DP, think about whether only a few elements were considered or the whole dp array for each iteration. If the former, we could optimize the space to constant space.

@@ -40,7 +40,7 @@ public class BestTimeToBuyAndSellStockWithCooldown {
    * dp[i] = dp[i - 1]
    * 
    * 2. Complexity 
-   * - Time O(N)
+   * - Time O(N^2)
    * - Space O(N)
    * 
    * @param prices

@@ -46,6 +46,15 @@ Things to look out for in DP problems that require a state variable include:
 5. Return the answer to the original problem
 
 ## Common Patterns
+### Iteration in the recurrence relation
+Usually the recurrence relation is a static equation such as dp(i)=min(dp(i - 1) + cost[i - 1], dp(i - 2) + cost[i - 2]). However, sometimes the recurrence relation could be dynamic and need iteration. For example, dp(i)=min(dp(j) + cost[j]) for all (i - k) <= j < i 
+
+### State Transition By Inaction 
+
+### Counting DP vs Pathing DP vs Optimal DP 
+
+### Kadane's Algorithm (Max Subarray)
+
 - The problem asks for the optimal value (maximum or minimum), number of ways there are to do something or if it is possible to reach a certain point. (It might be greedy or DP)
  - What is the minimum cost of doing...
  - What is the maximum profit from...

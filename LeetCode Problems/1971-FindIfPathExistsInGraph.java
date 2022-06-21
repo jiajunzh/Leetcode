@@ -1,7 +1,9 @@
 package problem;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -55,7 +57,7 @@ public class FindIfPathExistsInGraph {
    * @param destination
    * @return
    */
-  public boolean validPath(int n, int[][] edges, int source, int destination) {
+  public boolean validPathDfs(int n, int[][] edges, int source, int destination) {
     final List<Integer>[] graph = buildGraph(n, edges);
     final Stack<Integer> stack = new Stack<>();
     final boolean[] visited = new boolean[n];
@@ -94,5 +96,41 @@ public class FindIfPathExistsInGraph {
     }
 
     return graph;
+  }
+
+  /**
+   * 1. Approach 
+   * Graph (Adjacent List) + BFS
+   *
+   * 2. Complexity 
+   * - Time O(V + E)
+   * - Space O(V + E)
+   *
+   * @param n
+   * @param edges
+   * @param source
+   * @param destination
+   * @return
+   */
+  public boolean validPathBfs(int n, int[][] edges, int source, int destination) {
+    final List<Integer>[] graph = buildGraph(n, edges);
+    final Queue<Integer> queue = new LinkedList<>();
+    final boolean[] visited = new boolean[n];
+    queue.offer(source);
+
+    while (!queue.isEmpty()) {
+      int curr = queue.poll();
+      if (destination == curr) {
+        return true;
+      }
+      visited[curr] = true;
+      for (final int neighbor : graph[curr]) {
+        if (!visited[neighbor]) {
+          queue.offer(neighbor);
+        }
+      }
+    }
+
+    return false;
   }
 }

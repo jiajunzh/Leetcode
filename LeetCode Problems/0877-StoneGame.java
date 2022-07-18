@@ -62,7 +62,7 @@ public class StoneGame {
     if (start > end) return 0;
     if (start == end) return piles[start];
     if (memo[start][end] != 0) return memo[start][end];
-    memo[start][end] = Math.max(piles[start] + score(piles, start + 1, end), piles[end] + score(piles, start, end - 1));
+    memo[start][end] = Math.max(piles[start] - score(piles, start + 1, end), piles[end] - score(piles, start, end - 1));
     return memo[start][end];
   }
 

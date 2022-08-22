@@ -2,21 +2,22 @@
 ## Data Structure - Done 
 1. Array [05/08 - In Progress]
 2. Linked List [04/24 In_Progress]
-
+3. HashTable 
+ - Hash Function 
+ - Rolling Hash 
+ 	
 ## Algorithm - Done 
 1. Memoization [Done]
 2. Dynamic Programming [Done]
 3. Backtracking [Done]
 4. Binary Search [Done]
+5. Union Find 
 
 ## Data Structure - TODO
 1. Suffix Array
 2. String 
  - String Matching 
 4. Doubly-Linked List 
-5. HashTable 
- - Hash Function 
- - Rolling Hash 
 6. Queue
  - Monotonic Queue 
 7. Stack 
@@ -37,7 +38,6 @@
 ## Algorithm - TODO
 1. Recursion 
 2. DFS 
-3. Union Find 
 4. BFS
 9. Prefix Sum 
 10. Sliding Window

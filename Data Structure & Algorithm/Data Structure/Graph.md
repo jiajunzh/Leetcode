@@ -51,4 +51,23 @@ Space Complexity O(V)
 Time Complexity O((V - 1)!)
 Space Complexity O(V^3)
 
+## Minimum Spanning Tree 
+TBD 
+
+## Single Source Shortest Path
+Breath first search algorithm could be used to find the shortest path between two vertices. However, the BFS can only solve the shortest path problem in "unweighted graphs", which is not usually true in real life scenario.
+
+### Problem
+Given the starting vertex, find the "shortest path" to any of the vertices in a weighted graph. It depends on an operation called edge relaxation.
+
+### Dijkstra's Algorithm
+Dijkstra's algorithm solves the single source shortest path problem in a weighted directed graph with non-negative weights. The main idea is taking the start point u as the center and gradually expand outward while updating the shortest path to reach other vertices. The algorithm is a greedy approach where each step selects the minimum weight from the currently reached vertices to find the shortest path to other vertices.
+**Complexity Analysis**
+- Time O(E + ElogV)
+- Space O(E)
+
+
+
+
+
 

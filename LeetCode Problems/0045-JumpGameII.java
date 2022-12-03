@@ -52,12 +52,12 @@ public class JumpGameII {
    */
   public int jump(int[] nums) {
     int currMax = 0, nextIndex = 0, steps = 0;
-    for (int i = 0; i < nums.length - 1; i++) {
-      currMax = Math.max(currMax, nums[i] + i);
-      if (i == nextIndex) {
+    for (int i = 0; i < nums.length; i++) {
+      if (i > nextIndex) {
         steps++;
         nextIndex = currMax;
       }
+      currMax = Math.max(currMax, nums[i] + i);
     }
     return steps;
   }
